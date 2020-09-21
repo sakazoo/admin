@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: admin
+  datasource:
+    url: jdbc:mysql://localhost:3306/test
+    username: docker
+    password: docker
+    hikari:
+      connection-timeout: 10000
+      maximum-pool-size: 20
+      minimum-idle: 5
+
+logging:
+  pattern:
+    level: "%5p USER_ID:%X{USER_ID} SESSION_ID:%X{SESSION_ID} TRACE_ID:%X{traceId}"
